@@ -1,14 +1,26 @@
 function Drink({ name }) {
+  let tipo;
+  let cantidad;
+  let antiguedad;
+  if (name == "té"){
+    tipo="hoja";
+    cantidad="15–70 mg/taza";
+    antiguedad="4,000+ años";
+  }else{
+    tipo="grano";
+    cantidad="80–185 mg/taza";
+    antiguedad="1,000+ años";
+  }
     return (
       <section>
         <h1>{name}</h1>
         <dl>
           <dt>Parte de la planta</dt>
-          <dd>{name === 'té' ? 'hoja' : 'grano'}</dd>
+          <dd>{tipo}</dd>
           <dt>Contenido de cafeína</dt>
-          <dd>{name === 'té' ? '15–70 mg/taza' : '80–185 mg/taza'}</dd>
+          <dd>{cantidad}</dd>
           <dt>Antigüedad</dt>
-          <dd>{name === 'té' ? '4,000+ años' : '1,000+ años'}</dd>
+          <dd>{antiguedad}</dd>
         </dl>
       </section>
     );
